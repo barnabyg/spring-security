@@ -1,0 +1,1 @@
+<img src="image/bhg_agile_logo_30px.png" style="float: right;height: 30px;width: 100px"/>
