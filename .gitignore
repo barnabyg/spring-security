@@ -1,1 +1,8 @@
 /target
+/.settings
+/.checkstyle
+/.classpath
+/.pmd
+/.project
+/appdb.properties
+/appdb.script
