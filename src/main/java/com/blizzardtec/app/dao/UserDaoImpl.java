@@ -33,7 +33,7 @@ public final class UserDaoImpl
         User user = null;
 
         @SuppressWarnings("unchecked")
-        final List<User> list =
+        final List<User> list = (List<User>)
                 getHibernateTemplate().find("from "
                         + User.class.getName()
                         + " u where u.username = ?", username);
