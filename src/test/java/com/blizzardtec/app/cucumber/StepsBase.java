@@ -33,7 +33,7 @@ public class StepsBase {
     /**
      * Base URL.
      */
-    public static final String BASE_URL = "http://localhost:8080/";
+    public static final String BASE_URL = "http://localhost:7073/";
     /**
      * Window height.
      */

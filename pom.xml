@@ -64,10 +64,14 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>9.2.0.v20140526</version>
         <configuration>
+          <httpConnector>
+            <port>7073</port>
+            <idleTimeout>60000</idleTimeout>
+          </httpConnector>
           <scanIntervalSeconds>0</scanIntervalSeconds>
           <contextPath>/</contextPath>
           <stopKey>foo</stopKey>
-          <stopPort>9999</stopPort>
+          <stopPort>9994</stopPort>
         </configuration>
         <executions>
           <execution>
