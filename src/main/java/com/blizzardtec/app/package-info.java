@@ -5,6 +5,5 @@
  * gateway from the view layer to the business layer.
  *
  * @since 1.0
- * @see com.blizzardtec.tsa.controller
  */
 package com.blizzardtec.app;
