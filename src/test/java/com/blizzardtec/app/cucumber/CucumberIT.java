@@ -15,6 +15,7 @@ import cucumber.api.junit.Cucumber;
  * @author Barnaby Golden
  *
  */
+@SuppressWarnings("deprecation")
 @RunWith(Cucumber.class)
 @Cucumber.Options(format = {
         "pretty",
