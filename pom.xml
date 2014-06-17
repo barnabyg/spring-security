@@ -17,7 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <spring-version>4.0.5.RELEASE</spring-version>
-    <spring-security-version>3.1.0.RELEASE</spring-security-version>
+    <spring-security-version>3.2.4.RELEASE</spring-security-version>
     <cobertura.version>2.6</cobertura.version>
     <pmd.version>3.1</pmd.version>
     <checkstyle.version>2.12.1</checkstyle.version>
@@ -89,7 +89,7 @@
             <id>stop-jetty</id>
             <phase>post-integration-test</phase>
             <goals>
-              <!-- <goal>stop</goal> -->
+              <goal>stop</goal>
             </goals>
           </execution>
         </executions>
@@ -300,7 +300,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.42.0</version>
+      <version>2.42.2</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -316,27 +316,27 @@
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
-      <version>2.3.0</version>
+      <version>2.3.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-extras</artifactId>
-      <version>3.0.1</version>
+      <version>3.0.4</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.0.13</version>
+      <version>1.1.2</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
-      <version>1.7.5</version>
+      <version>1.7.7</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>1.7.5</version>
+      <version>1.7.7</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
