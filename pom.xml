@@ -178,8 +178,16 @@
         </configuration>
         <executions>
           <execution>
+            <id>clean</id>
+            <phase>clean</phase>
             <goals>
               <goal>clean</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>package</id>
+            <phase>package</phase>
+            <goals>
               <goal>check</goal>
             </goals>
           </execution>
@@ -216,11 +224,13 @@
           </reportSet>
         </reportSets>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jxr-plugin</artifactId>
         <version>2.4</version>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
@@ -229,6 +239,7 @@
           <targetJdk>1.7</targetJdk>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -237,17 +248,19 @@
           <configLocation>${basedir}/src/main/resources/barnaby-checkstyle-config.xml</configLocation>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>${cobertura.version}</version>
-        <configuration>
-          <formats>
-            <format>html</format>
-            <format>xml</format>
-          </formats>
-        </configuration>
-      </plugin>
+
+<!--       <plugin> -->
+<!--         <groupId>org.codehaus.mojo</groupId> -->
+<!--         <artifactId>cobertura-maven-plugin</artifactId> -->
+<!--         <version>${cobertura.version}</version> -->
+<!--         <configuration> -->
+<!--           <formats> -->
+<!--             <format>html</format> -->
+<!--             <format>xml</format> -->
+<!--           </formats> -->
+<!--         </configuration> -->
+<!--       </plugin> -->
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
