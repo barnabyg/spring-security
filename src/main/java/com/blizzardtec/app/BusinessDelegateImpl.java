@@ -10,7 +10,7 @@ package com.blizzardtec.app;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.blizzardtec.app.dao.UserDao;
-import com.blizzardtec.app.model.User;
+import com.blizzardtec.app.model.UserObj;
 
 /**
  * @author Barnaby Golden
@@ -27,7 +27,7 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    public void createUser(final User user) {
+    public void createUser(final UserObj user) {
 
         userDao.create(user);
     }
@@ -35,7 +35,7 @@ public final class BusinessDelegateImpl implements BusinessDelegate {
     /**
      * {@inheritDoc}
      */
-    public User getUser(final String username) {
+    public UserObj getUser(final String username) {
 
         return userDao.findByUsername(username);
     }

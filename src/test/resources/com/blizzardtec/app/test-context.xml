@@ -8,11 +8,11 @@
   "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd
    http://www.springframework.org/schema/tx
-   http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+   http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
    http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-4.1.xsd
+   http://www.springframework.org/schema/context/spring-context-4.2.xsd
    http://www.springframework.org/schema/mvc
-   http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+   http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
  <!-- Enabling Spring beans auto-discovery -->
  <context:component-scan base-package="com.blizzardtec.app" />
@@ -42,7 +42,7 @@
  </bean>
 
  <bean id="sessionFactory"
-  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+  class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
   destroy-method="destroy">
   <property name="dataSource" ref="dataSource" />
   <property name="packagesToScan" value="com.blizzardtec.app.model" />
@@ -55,7 +55,7 @@
   </property>
  </bean>
 
- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+ <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
   <property name="sessionFactory" ref="sessionFactory"/>
  </bean>
 
@@ -64,7 +64,7 @@
 
  <bean id="userDao" class="com.blizzardtec.app.dao.UserDaoImpl">
   <constructor-arg>
-   <value>com.blizzardtec.app.model.User</value>
+   <value>com.blizzardtec.app.model.UserObj</value>
   </constructor-arg>
  </bean>
 

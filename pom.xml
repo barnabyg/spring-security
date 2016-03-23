@@ -16,11 +16,21 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <spring-version>4.1.3.RELEASE</spring-version>
+    <cobertura.version>2.7</cobertura.version>
+    <pmd.version>3.6</pmd.version>
+    <checkstyle.version>2.17</checkstyle.version>
+    <spring.version>4.2.4.RELEASE</spring.version>
     <spring-security-version>3.2.5.RELEASE</spring-security-version>
-    <cobertura.version>2.6</cobertura.version>
-    <pmd.version>3.1</pmd.version>
-    <checkstyle.version>2.12.1</checkstyle.version>
+    <cucumber.version>1.2.4</cucumber.version>
+    <selenium.version>2.53.0</selenium.version>
+    <surefire.version>2.19.1</surefire.version>
+    <hibernate.version>5.1.0.Final</hibernate.version>
+    <junit.version>4.12</junit.version>
+    <hsqldb.version>2.3.3</hsqldb.version>
+    <jetty.version>9.2.1.v20140609</jetty.version>
+<!--     <jetty.version>9.3.7.v20160115</jetty.version> -->
+    <maven.version>3.5</maven.version>
+    <java.target>1.8</java.target>
   </properties>
 
   <build>
@@ -252,62 +262,62 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>${spring-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>${junit.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>4.3.7.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>5.2.0.Alpha1</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>1.2.0</version>
+      <version>${cucumber.version}</version>
     </dependency>
     <dependency>
       <groupId>info.cukes</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>1.2.0</version>
+      <version>${cucumber.version}</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.44.0</version>
+      <version>${selenium.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>

@@ -27,6 +27,10 @@ public class GenericDaoImpl<T, P extends Serializable>
                                     implements GenericDao<T, P> {
 
     /**
+     * Session Factory.
+     */
+    private SessionFactory sessionFactory;
+    /**
      * Class type.
      */
     private final transient Class<T> type;
@@ -51,6 +55,7 @@ public class GenericDaoImpl<T, P extends Serializable>
     @Autowired
     public final void setSessionFactory(final SessionFactory sessionFactory) {
 
+        this.sessionFactory = sessionFactory;
         this.hibernateTemplate = new HibernateTemplate(sessionFactory);
     }
 
@@ -92,5 +97,13 @@ public class GenericDaoImpl<T, P extends Serializable>
      */
     protected final HibernateTemplate getHibernateTemplate() {
         return this.hibernateTemplate;
+    }
+
+    /**
+     * Return session factory.
+     * @return factory
+     */
+    public final SessionFactory getSessionFactory() {
+        return this.sessionFactory;
     }
 }

@@ -7,7 +7,7 @@
  */
 package com.blizzardtec.app;
 
-import com.blizzardtec.app.model.User;
+import com.blizzardtec.app.model.UserObj;
 
 /**
  * @author Barnaby Golden
@@ -19,12 +19,12 @@ public interface BusinessDelegate {
      * Create a user.
      * @param user the <code>User</code> to persist
      */
-    void createUser(User user);
+    void createUser(UserObj user);
 
     /**
      * Retrieve a user with the given username.
      * @param username the username to search for
      * @return populate <code>User</code> object
      */
-    User getUser(String username);
+    UserObj getUser(String username);
 }

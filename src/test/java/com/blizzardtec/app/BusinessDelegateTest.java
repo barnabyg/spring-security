@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.blizzardtec.app.model.User;
+import com.blizzardtec.app.model.UserObj;
 
 /**
  * @author Barnaby Golden
@@ -47,7 +47,7 @@ public final class BusinessDelegateTest extends TestBase {
      */
     @Test
     public void userTests() {
-        final User user = new User();
+        final UserObj user = new UserObj();
 
         user.setUsername(USERNAME);
         user.setForename(FORENAME);
@@ -55,7 +55,7 @@ public final class BusinessDelegateTest extends TestBase {
 
         delegate.createUser(user);
 
-        final User user2 = delegate.getUser(USERNAME);
+        final UserObj user2 = delegate.getUser(USERNAME);
 
         assertEquals("Forenames did not match", FORENAME, user2.getForename());
         assertEquals("Surnames did not match", SURNAME, user2.getSurname());
