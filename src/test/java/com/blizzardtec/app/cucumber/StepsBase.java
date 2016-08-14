@@ -7,12 +7,14 @@
  */
 package com.blizzardtec.app.cucumber;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -52,8 +54,22 @@ public class StepsBase {
      */
     protected final WebDriver getDriver() {
 
+        if (SystemUtils.IS_OS_WINDOWS) {
+            System.setProperty(
+              "webdriver.gecko.driver", "src/test/resources/wires.exe");
+        } else {
+            System.setProperty(
+              "webdriver.gecko.driver", "src/test/resources/wires");
+        }
+
         if (driver == null) {
-            driver = new FirefoxDriver();
+            final DesiredCapabilities capabilities
+                            = DesiredCapabilities.firefox();
+
+            capabilities.setCapability("marionette", true);
+
+            driver = new FirefoxDriver(capabilities);
+
             driver.manage().window().setSize(new Dimension(WIDTH, HEIGHT));
         }
 
