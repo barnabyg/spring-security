@@ -24,24 +24,24 @@ public interface GenericDao<T, P extends Serializable> {
      * @param entity entity to save
      * @return entity primary key
      */
-    P create(final T entity);
+    P create(T entity);
 
     /**
      * Find by primary key.
      * @param id the id to use
      * @return entity
      */
-    T retrieve(final P id);
+    T retrieve(P id);
 
     /**
      * Update an entity.
      * @param entity entity to update
      */
-    void update(final T entity);
+    void update(T entity);
 
     /**
      * Delete.
      * @param entity entity to delete
      */
-    void delete(final T entity);
+    void delete(T entity);
 }
