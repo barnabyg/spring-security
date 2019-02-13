@@ -1,6 +1,8 @@
 <%@ taglib  prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<form:form method="post" action="j_spring_security_check">
+<!-- <form:form method="post" action="j_spring_security_check"> -->
+<form action="<c:url value="/j_spring_security_check"></c:url>" method="post" role="form">
 
 <div id="login-error">${error}</div>
 
